@@ -36,7 +36,7 @@ export const ProductFormSchema = z.object({
   description: z.string()
           .min(1, {message: 'La descripcion del Producto no puede ir vacio'}),
   image: z.string({message: 'La imagen es obligatoria'}),
-  show: z.boolean(),
+  show: z.boolean().optional().default(false),
   price: z.coerce.number({message: 'Precio no válido'})
           .min(1, {message: 'El Precio debe ser mayor a 0'}),
   categoryId: z.coerce.number({message: 'La Categoria no es válida'})

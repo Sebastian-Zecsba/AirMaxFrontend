@@ -12,10 +12,12 @@ export async function addProduct(prevState: ActionStateType, formData: FormData)
         name: formData.get('name'),
         price: formData.get('price'),
         image: formData.get('image'),
-        show: formData.get('show'),
+        show: formData.get('show') ? formData.get('show') === "true" : false,
         description: formData.get('description'),
         categoryId: formData.get('categoryId')
     })
+
+    console.log(product)
 
     if(!product.success){
         return {
