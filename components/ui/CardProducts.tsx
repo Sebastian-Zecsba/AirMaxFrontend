@@ -1,11 +1,10 @@
-import { ProduchsResponsechema } from "@/schemas";
 import { formatCurrency, getImagePath } from "@/utils";
 import Image from "next/image";
 import Link from "next/link";
 
 async function getProducts() {
     const url = `${process.env.API_URL}/products`
-    const req = await fetch(url)
+    const req = await fetch(url, {cache: 'no-store'})
     const json = await req.json()
     return json
 }
