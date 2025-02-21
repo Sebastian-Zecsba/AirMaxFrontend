@@ -1,0 +1,13 @@
+@import "tailwindcss";
+
+.color-red{
+    background: #D32A26;
+}
+
+.color-bg{
+    background-color: #FFFBFB;
+}
+
+.color-blue{
+    background-color: #1A3672;
+}
