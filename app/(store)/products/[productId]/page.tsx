@@ -3,7 +3,7 @@ import { formatCurrency, getImagePath } from "@/utils"
 import Image from "next/image"
 import Link from "next/link"
 
-type Params = { productId: string }
+type Params = Promise<{ productId: string }>
 
 async function getProductById(id: number) {
   const url = `${process.env.API_URL}/products/${id}`
@@ -21,7 +21,7 @@ async function getProducts(categoryId: number) {
 }
 
 export default async function Page({ params }: { params: Params }) {
-  const { productId } = params
+  const { productId } = await params
   const product = await getProductById(+productId)
   const productsRelated = await getProducts(product.categoryId)
 
