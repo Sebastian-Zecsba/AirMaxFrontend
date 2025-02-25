@@ -36,7 +36,7 @@ export default function MainNav() {
                 </div>
 
                     <a
-                        href='https://wa.link/kn6qml' 
+                        href='https://wa.link/0h17sg' 
                         className="flex items-center space-x-1 hover:text-blue-700"
                         target="_blank"
                     >
@@ -71,7 +71,7 @@ export default function MainNav() {
                         className="flex-shrink-0 lg:min-w-[50px] lg:min-h-[50px] max-w-[35px] max-h-[35]"
                     />
                 </a>
-                <a href='https://wa.link/kn6qml' target="_blank" className="text-blue-600 hover:text-blue-800">
+                <a href='https://wa.link/0h17sg' target="_blank" className="text-blue-600 hover:text-blue-800">
                     <Image
                         src={"/whatsapp.png"}
                         alt="Air Max Facebook"
