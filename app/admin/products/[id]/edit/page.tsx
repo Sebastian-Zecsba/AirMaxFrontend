@@ -24,7 +24,7 @@ export default async function EditProductPage({params} : {params: Params}) {
     const product = await getProducts(id)
 
   return (
-    <>
+    <div className="lg:w-[85%] sm:w-[100%] m-auto p-5">
         <Link
             href='/admin/products?page=1'
             className="rounded bg-green-400 font-bold py-2 px-10"
@@ -38,6 +38,6 @@ export default async function EditProductPage({params} : {params: Params}) {
             />
         </EditProductForm>
 
-    </>
+    </div>
   )
 }

@@ -9,7 +9,7 @@ export default async function page() {
   
 
   return (
-    <div className="lg:w-[85%] sm:w-[100%] m-auto">
+    <div className="lg:w-[85%] sm:w-[100%] m-auto p-5">
       <div className="flex justify-between items-center flex-row-reverse">
           <Link 
               href='/admin/categories'

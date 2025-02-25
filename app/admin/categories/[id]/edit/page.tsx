@@ -26,7 +26,7 @@ export default async function EditCategoryPage({params} : {params: Params}) {
     const category = await getCategoires(id)
 
   return (
-    <>
+    <div className="lg:w-[85%] sm:w-[100%] m-auto p-5">
         <Link
             href='/admin/categories'
             className="rounded bg-green-400 font-bold py-2 px-10"
@@ -41,6 +41,6 @@ export default async function EditCategoryPage({params} : {params: Params}) {
         </EditCategoryForm>
 
 
-    </>
+    </div>
   )
 }

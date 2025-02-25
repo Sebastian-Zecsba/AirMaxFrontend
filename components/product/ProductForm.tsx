@@ -14,7 +14,7 @@ export default async function ProductForm({product} : {product?: Product}) {
 
   return (
       <>
-        <div className="space-y-2 ">
+        <div className="space-y-2">
           <label
             htmlFor="name"
             className="block"

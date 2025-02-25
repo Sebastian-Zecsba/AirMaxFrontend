@@ -16,7 +16,7 @@ export default function Footer() {
             </div>
 
             <div className="order-2 sm:order-3 flex gap-6">
-            <a href="#" className="text-blue-600 hover:text-blue-800">
+            <a href="https://www.facebook.com/AirMaxfluidtec?rdid=OHWLnNDlP4LGt6Cc&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17w8wuUaKX%2F" target="_blank" className="text-blue-600 hover:text-blue-800">
                 <Image
                 src={"/FacebookWhite.png"}
                 alt="Air Max Facebook"
@@ -25,7 +25,7 @@ export default function Footer() {
                 className="flex-shrink-0 lg:min-w-[50px] lg:min-h-[50px] max-w-[35px] max-h-[35]"
                 />
             </a>
-            <a href="#" className="text-blue-600 hover:text-blue-800">
+            <a href="https://www.instagram.com/airmaxcolombia" target="_blank" className="text-blue-600 hover:text-blue-800">
                 <Image
                 src={"/instaWhite.png"}
                 alt="Air Max Instagram"
@@ -34,7 +34,7 @@ export default function Footer() {
                 className="flex-shrink-0 lg:min-w-[50px] lg:min-h-[50px] max-w-[35px] max-h-[35]"
                 />
             </a>
-            <a href='https://wa.link/kn6qml'  target="_blank" className="text-blue-600 hover:text-blue-800">
+            <a href='https://wa.link/kn6qml' target="_blank" className="text-blue-600 hover:text-blue-800">
                 <Image
                 src={"/wassWhite.png"}
                 alt="Air Max WhatsApp"
@@ -56,7 +56,7 @@ export default function Footer() {
                         className="sm:block flex-shrink-0 lg:min-w-[50px] lg:min-h-[50px] max-w-[35px] max-h-[35]"
                     />
                     <div>
-                    <p>Carrera 25a #12 - 01 local 3</p>
+                    <p>Carrera 25a #12b - 01 local 3</p>
                     <p>Bogotá, Colombia</p>
                     </div>
                 </div>
@@ -74,7 +74,7 @@ export default function Footer() {
                         height={35}
                         className="flex-shrink-0 lg:min-w-[50px] lg:min-h-[50px] max-w-[35px] max-h-[35]  "
                     />
-                    <span>350 8002529</span>
+                    <span>350 6092529</span>
                 </a>
             </div>
         </div>

@@ -30,7 +30,7 @@ export default function MainNavAdmin() {
                     />
 
                     <div>
-                        <p className="lg:text-[1.15rem] text-[1rem]">Carrera 25a #12 - 01 local 3</p>
+                        <p className="lg:text-[1.15rem] text-[1rem]">Carrera 25a #12b - 01 local 3</p>
                         <p className="lg:text-[1.15rem] text-[1rem]">Bogota, Colombia</p>
                     </div>
                 </div>
@@ -48,12 +48,12 @@ export default function MainNavAdmin() {
                             className="flex-shrink-0 lg:min-w-[50px] lg:min-h-[50px] max-w-[35px] max-h-[35]  "
                         />
 
-                        <span className="lg:text-[1.15rem] text-[1rem]">350 8002529</span>
+                        <span className="lg:text-[1.15rem] text-[1rem]">350 6092529</span>
                     </a>
               </div>
 
             <div className="flex lg:gap-5 sm:gap-3">
-                <a href="#" className="text-blue-600 hover:text-blue-800">
+                <a href="https://www.facebook.com/AirMaxfluidtec?rdid=OHWLnNDlP4LGt6Cc&share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F17w8wuUaKX%2F" target="_blank" className="text-blue-600 hover:text-blue-800">
                     <Image
                         src={"/facebook.png"}
                         alt="Air Max Facebook"
@@ -62,7 +62,7 @@ export default function MainNavAdmin() {
                         className="flex-shrink-0 lg:min-w-[50px] lg:min-h-[50px] max-w-[35px] max-h-[35]"
                     />
                 </a>
-                <a href="#" className="text-blue-600 hover:text-blue-800">
+                <a href="https://www.instagram.com/airmaxcolombia" target="_blank" className="text-blue-600 hover:text-blue-800">
                     <Image
                         src={"/instagram.png"}
                         alt="Air Max Facebook"
@@ -71,7 +71,7 @@ export default function MainNavAdmin() {
                         className="flex-shrink-0 lg:min-w-[50px] lg:min-h-[50px] max-w-[35px] max-h-[35]"
                     />
                 </a>
-                <a href='https://wa.link/kn6qml'  target="_blank" className="text-blue-600 hover:text-blue-800">
+                <a href='https://wa.link/kn6qml' target="_blank" className="text-blue-600 hover:text-blue-800">
                     <Image
                         src={"/whatsapp.png"}
                         alt="Air Max Facebook"
