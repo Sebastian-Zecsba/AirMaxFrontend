@@ -10,16 +10,16 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "AIR MAX Pneumatic",
-  description: "AIR MAX Pneumatic repuestos",
+  title: "AIR MAX Pneumatic sas",
+  description: "AIR MAX Pneumatic sas repuestos",
   keywords: ["AIR MAX", "Pneumatic", "Repuestos", "Empresa", "Accesorios"],
   authors: [
-    { name: "AIR MAX Pneumatic", url: "https://tusitio.com" }
+    { name: "AIR MAX Pneumatic sas", url: "https://www.airmaxpneumaticsas.com" }
   ],
   openGraph: {
-    title: "AIR MAX Pneumatic",
+    title: "AIR MAX Pneumatic sas",
     description: "AIR MAX Pneumatic repuestos",
-    url: "https://tusitio.com",
+    url: "https://www.airmaxpneumaticsas.com",
     siteName: "AIR MAX Pneumatic",
     images: [
       {
@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "AIR MAX Pneumatic",
+    title: "AIR MAX Pneumatic sas",
     description: "AIR MAX Pneumatic repuestos",
     images: ["/MainLogo.png"],
   },

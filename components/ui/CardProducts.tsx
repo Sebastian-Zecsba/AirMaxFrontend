@@ -12,7 +12,7 @@ async function getProducts() {
 export default async function CardProducts() {
 
     const { products } = await getProducts()
-    const productsFiltered = products.filter((product : any) => product.show == true)
+    const productsFiltered = products?.filter((product : any) => product.show == true)
     console.log(productsFiltered)
 
   return (
