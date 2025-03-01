@@ -3,50 +3,54 @@
 import { ErrorResponseSchema, ProductFormSchema } from "@/schemas"
 
 type ActionStateType = {
-    errors: string[],
-    success: string
+  errors: string[],
+  success: string
 }
 
 export async function addProduct(prevState: ActionStateType, formData: FormData) {
-    const product = ProductFormSchema.safeParse({
-        name: formData.get('name'),
-        price: formData.get('price'),
-        image: formData.get('image'),
-        show: formData.get('show') ? formData.get('show') === "true" : false,
-        description: formData.get('description'),
-        categoryId: formData.get('categoryId')
-    })
+  const images = [];
+  for (let i = 0; i < 3; i++) {
+    const img = formData.get(`images[${i}]`);
+    if (img) images.push(img);
+  }
 
-    console.log(product)
+  const product = ProductFormSchema.safeParse({
+    name: formData.get('name'),
+    price: Number(formData.get('price')), // Convertimos a número
+    images: images, // Ahora es un arreglo
+    show: formData.get('show') ? formData.get('show') === "true" : false,
+    description: formData.get('description'),
+    categoryId: formData.get('categoryId')
+  });
 
-    if(!product.success){
-        return {
-            errors: product.error.issues.map(issue => issue.message),
-            success: ''
-        }
-    }
+  if (!product.success) {
+    return {
+      errors: product.error.issues.map(issue => issue.message),
+      success: ''
+    };
+  }
 
-    const url = `${process.env.API_URL}/products`
-    const req = await fetch(url, {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(product.data)
-    })
+  const url = `${process.env.API_URL}/products`
+  const req = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(product.data)
+  });
 
-    const json = await req.json()
+  const json = await req.json();
 
-    if(!req.ok){
-        const errors = ErrorResponseSchema.parse(json)
-        return { 
-            errors: errors.message.map(issue => issue),
-            success: '' 
-        }
-    }
+  if (!req.ok) {
+    const errors = ErrorResponseSchema.parse(json);
+    return { 
+      errors: errors.message.map(issue => issue),
+      success: '' 
+    };
+  }
 
-    return {  
-        errors: [],
-        success: 'Producto agregado correctamente'
-    }
+  return {  
+    errors: [],
+    success: 'Producto agregado correctamente'
+  };
 }

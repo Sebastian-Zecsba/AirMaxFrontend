@@ -3,7 +3,7 @@ import { z } from 'zod';
 export const ProductSchema = z.object({
   id: z.number(),
   name: z.string(),
-  image: z.string(),
+  images: z.array(z.string().url()),
   description: z.string(),
   show: z.boolean(),
   price: z.coerce.number(),
@@ -35,7 +35,7 @@ export const ProductFormSchema = z.object({
           .min(1, {message: 'El Nombre del Producto no puede ir vacio'}),
   description: z.string()
           .min(1, {message: 'La descripcion del Producto no puede ir vacio'}),
-  image: z.string({message: 'La imagen es obligatoria'}),
+  images: z.array(z.string().url()).min(1, 'Debe haber al menos una imagen').max(3, 'Máximo 3 imágenes'),
   show: z.boolean().optional().default(false),
   price: z.coerce.number({message: 'Precio no válido'})
           .min(1, {message: 'El Precio debe ser mayor a 0'}),

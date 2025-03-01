@@ -13,7 +13,7 @@ async function getCategories() {
 
 export default async function ProductsTable({products} : {products: any[]}) {
     const categories = await getCategories()
-
+    console.log(products)
     return (
       <div className="px-4 sm:px-6 lg:px-8 mt-10">
         <div className="mt-8 flow-root ">
@@ -44,7 +44,7 @@ export default async function ProductsTable({products} : {products: any[]}) {
                       <tr key={product.id} className="hover:bg-gray-300">
                         <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-500">
                             <Image 
-                                src={getImagePath(product.image)}
+                                src={getImagePath(product.images[0])}
                                 alt={`${product.name} Air Max Pneumatic`}
                                 width={120}
                                 height={120}

@@ -9,7 +9,7 @@ export default function Contact() {
                 <h2 className='font-bold text-2xl text-center sm:text-4xl sm:text-left lg:w-[60%]'>¿Tienes alguna inquietud?</h2>
                 <p className='text-center font-bold sm:text-2xl sm:text-left lg:w-[60%]'>Contactanos con nosotros para brintarte la mejor información posible</p>
                 <a 
-                    href='https://wa.link/kn6qml' 
+                    href='https://wa.link/0h17sg' 
                     className='color-blue text-white p-4 rounded-2xl'
                     target="_blank"
                 >Lamanos al 350 6092529</a>

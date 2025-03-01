@@ -14,7 +14,6 @@ export default function AddProductForm({children} : {children : React.ReactNode}
         success: ''
     })
 
-    console.log(state)
 
     useEffect(() => {
         if(state.errors){

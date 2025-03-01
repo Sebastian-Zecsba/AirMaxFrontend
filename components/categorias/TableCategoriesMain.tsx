@@ -125,7 +125,7 @@ export default function CategoriesContent() {
                       <div className="flex flex-col items-center w-72 lg:w-80 min-h-96 px-4 color-blue rounded-2xl">
                       <div className="bg-white relative w-72 h-72 lg:w-80 lg:h-80 opacity-80">
                         <Image
-                          src={getImagePath(product.image)}
+                          src={getImagePath(product.images[0])}
                           alt={`${product.name} Air Max Pneumatic`}
                           fill
                           className="object-cover object-center rounded-t-2xl"
@@ -137,12 +137,12 @@ export default function CategoriesContent() {
                             <h1 className="text-white font-medium mb-2 text-xl">
                               {product.name}
                             </h1>
-                            <p className="text-white my-1">
+                            {/* <p className="text-white my-1">
                               Precio: <span className="font-bold">${formatCurrency(product.price)}</span>
-                            </p>
+                            </p> */}
                             <p className="text-white line-clamp-3">{product.description}</p>
                           </div>
-                          <p className="text-white mt-4">{categoryName}</p>
+                          <p className="text-white mt-4"> Categoria: <span className="font-bold">{categoryName}</span></p>
                         </div>
                       </div>
                     </Link>

@@ -9,14 +9,20 @@ type ActionStateType = {
 
 export async function updatedProduct(productId: Product['id'], prevState: ActionStateType, formData: FormData) {
 
+    const images = [];
+    for (let i = 0; i < 3; i++) {
+        const img = formData.get(`images[${i}]`);
+        if (img) images.push(img);
+    }
+
     const product = ProductFormSchema.safeParse({
         name: formData.get('name'),
-        price: formData.get('price'),
-        image: formData.get('image'),
+        price: Number(formData.get('price')), // Convertimos a número
+        images: images, // Ahora es un arreglo
         show: formData.get('show') ? formData.get('show') === "true" : false,
         description: formData.get('description'),
         categoryId: formData.get('categoryId')
-    })
+    });
 
     if(!product.success){
         return {
