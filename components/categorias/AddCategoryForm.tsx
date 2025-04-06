@@ -19,7 +19,7 @@ export default function AddCategoryForm({children} : {children: React.ReactNode}
     }
     if(state.success){
         toast.success(state.success)
-        router.push('/admin/products')
+        router.push('/admin/categories')
     }
 }, [state])
 
