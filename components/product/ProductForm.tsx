@@ -3,7 +3,7 @@ import UploadProductImage from "./UploadProductImage"
 
 async function getCategories() {
     const url = `${process.env.API_URL}/categories`
-    const req = await fetch(url)
+    const req = await fetch(url, { cache: 'no-cache'})
     const json = await req.json()
     return json
 }
